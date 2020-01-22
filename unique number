@@ -1,0 +1,36 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+/* print the unique digit in the array*/
+#include <stdio.h>
+
+int main()
+{
+    int n,i,j,a[100],cnt=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        
+    }
+    for(i=0;i<n;i++)
+    {
+        cnt=0;
+        for(j=0;j<n;j++)
+        {
+            if(a[i]==a[j]){
+                cnt++;
+                
+            }
+        }
+    if(cnt==1)
+     {
+         printf("%d ",a[i]);
+    } }
+    return 0;
+}

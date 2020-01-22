@@ -1,0 +1,45 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+/*
+input: 1 3 7 8 4
+ output: 1 7 24 28 4
+ first and last digits same
+ middle-prev no*netx no
+ */
+#include <stdio.h>
+
+int main()
+{
+  
+      int a[100],n,i,r;
+      scanf("%d",&n);
+      for(i=0;i<n;i++)
+      {
+          scanf("%d",&a[i]);
+          
+      }
+      
+      for(i=0;i<n;i++)
+      {
+          if(i==0||i==n-1)
+          {
+              printf("%d ",a[i]);
+              
+          }
+          else
+          
+          printf("%d ",a[i-1]*a[i+1]);
+    
+          
+      }
+    
+      
+    return 0;
+}
+

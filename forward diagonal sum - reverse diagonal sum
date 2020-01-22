@@ -1,0 +1,45 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+/* to find the difference between forward diagonal sum and reverse diagonal sum
+(fwd-rev)
+*/
+
+#include <stdio.h>
+
+int main()
+{
+     int a[10][10],n,i,j,fwd=0,rev=0;
+    
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&a[i][j]);
+            
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(i==j)
+            {
+                fwd=fwd+a[i][j];
+            }
+            if(i+j==(n-1))
+            {
+                rev=rev+a[i][j];
+                
+            }
+        }
+    }
+    printf("%d",(fwd-rev));
+    return 0;
+}

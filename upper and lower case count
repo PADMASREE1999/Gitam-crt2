@@ -1,0 +1,49 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+/* ASCII
+   A-Z --> 65-90
+   a-z --> 97-122
+   0-9 --> 48-57
+   space --> 32
+
+*/
+
+
+
+/* print the no of upper and lower cases in the given string
+ex: AppLiCaTiOn
+    u - 5
+    l - 6
+*/
+#include <stdio.h>
+
+int main()
+{
+    int len=0,i,lcnt=0,ucnt=0;
+    char x[100];
+    scanf("%[^\n]s",x);
+    for(i=0;x[i]!='\0';i++)
+    {
+        len++;
+        
+    }
+    for(i=0;i<len;i++)
+    {
+        if(x[i]>=65&&x[i]<=90)
+        {
+            ucnt++;
+        }
+        else if(x[i]>=97&&x[i]<=122)
+        {
+            lcnt++;
+        }
+    }
+    printf("u : %d L: %d",ucnt,lcnt);
+    return 0;
+}

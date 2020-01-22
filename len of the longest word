@@ -1,0 +1,43 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+/* find the length of the longest word */
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int l,i,prevcnt=0,currentcnt=0;
+    char x[100];
+    scanf("%[^\n]s",x);
+    l=strlen(x);
+    for(i=0;i<l;i++)
+    {
+        if(x[i]!=32)
+        {
+            currentcnt++;
+        }
+        else if(x[i]==32)
+        {
+            if(prevcnt<currentcnt)
+            {
+                prevcnt=currentcnt;
+            }
+            currentcnt=0;
+        }
+        
+    }if(prevcnt<currentcnt)
+    {
+        prevcnt=currentcnt;
+    }
+    printf("%d",prevcnt);
+    return 0;
+}    
+    
+        
+        

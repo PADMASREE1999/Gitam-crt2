@@ -1,0 +1,61 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+/*
+  mango eat --> me
+                aa
+                nt
+                g*
+                o*
+  eat  mango --> em
+                 aa
+                 tn
+                 *g
+                 *o
+*/
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    int l1,l2,i;
+    char x[100],y[100];
+    scanf("%s",x);
+    scanf("%s",y);
+    l1=strlen(x);
+    l2=strlen(y);
+    if(l1==l2)
+    {
+        for(i=0;i<l1;i++)
+        {
+            printf("%c%c\n",x[i],y[i]);
+        }
+    }
+    else if(l1>l2)
+    {
+        for(i=0;i<l2;i++)
+        {
+            printf("%c%c\n",x[i],y[i]);
+        }
+        for(i=l2;i<l1;i++)
+        {
+            printf("%c*\n",x[i]);
+        }
+    }
+    else if(l2>l1)
+    {
+        for(i=0;i<l1;i++)
+        {
+            printf("%c%c\n",x[i],y[i]);
+        }
+        for(i=l1;i<l2;i++)
+        {
+            printf("*%c\n",y[i]);
+        }
+    }
+    return 0;
+}

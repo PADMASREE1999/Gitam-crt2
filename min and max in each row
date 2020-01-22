@@ -1,0 +1,59 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+/* printmax and min in each row
+ ex:
+   input:
+        12 34 21 54
+        32 43 11 7
+        1 3 5 2 
+        4 2 3 7
+    output:
+        <12,54>
+        <7,43>
+        <1,5>
+        <2,7>
+*/
+#include <stdio.h>
+
+int main()
+{
+   int a[10][10],n,i,j,max,min;
+    //reading a multidimentional array
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&a[i][j]);
+            
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        max=min=a[i][0];
+        for(j=0;j<n;j++)
+        {
+            if(max<a[i][j])
+            {
+                max=a[i][j];
+                
+            }
+            if(min>a[i][j])
+            {
+                min=a[i][j];
+                
+            }
+        
+        }
+        printf("<%d,%d>",min,max);
+        printf("\n");
+    }
+    return 0;
+}
+

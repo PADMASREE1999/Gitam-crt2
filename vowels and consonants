@@ -1,0 +1,51 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+/* orange --> puboif ( next vowel to the consonant and next consonant to the vowel) */
+// a-z --> 97-122
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int l,i;
+    char x[100];
+    scanf("%[^\n]s",x);
+    l=strlen(x);
+    for(i=0;i<l;i++)
+    {
+        if(x[i]==97||x[i]==101||x[i]==105||x[i]==111||x[i]==117)
+        {
+            printf("%c",x[i]+1);// %c is used to print the character present in x[i]( GIVEN ASCII VALUE)
+        }
+        else if(x[i]>=98&&x[i]<=100)
+        {
+            printf("e");
+        }
+        else if(x[i]>=102&&x[i]<=104)
+        {
+            printf("i");
+            
+        }
+        else if(x[i]>=106&&x[i]<=110)
+        {
+            printf("o");
+            
+        }
+        else if(x[i]>=112&&x[i]<=116)
+        {
+            printf("u");
+            
+        }
+        else if(x[i]>=118)
+        {
+            printf("a");
+        }
+    }
+
+    return 0;
+}

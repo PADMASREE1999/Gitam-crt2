@@ -1,0 +1,47 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+/* print the longest word*/
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int l,i,prevcnt=0,currentcnt=0,startindex,endindex;
+    char x[100];
+    scanf("%[^\n]s",x);
+    l=strlen(x);
+    for(i=0;i<l;i++)
+    {
+        if(x[i]!=32)
+        {
+            currentcnt++;
+        }
+        else if(x[i]==32)
+        {
+            if(prevcnt<currentcnt)
+            {
+                prevcnt=currentcnt;
+                startindex=i-prevcnt;
+                endindex=i;
+            }
+            currentcnt=0;
+        }
+        
+    }if(prevcnt<currentcnt)
+    {
+        prevcnt=currentcnt;
+        startindex=i-prevcnt;
+        endindex=i;
+    }
+    for(i=startindex;i<=endindex;i++)
+    {
+        printf("%c",x[i]);
+    }
+    return 0;
+}    
